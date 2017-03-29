@@ -23,10 +23,31 @@ body {
 
 }
 
-.promos{
-
+.promos_position_wwdc{
+	float: left;
 }
 
+.promos_wwdc{
+	background-size:25% 200px;
+	background-repeat: no-repeat;
+	margin: 1px;
+	background-image: url("https://github.com/GabrielaSouza94/Projeto-WEB/blob/master/image1_wwdc17.jpg");
+}
+.promos_mackbook{
+	background-size: 25% 200px;
+	background-repeat: no-repeat;
+	background-image: url(https://github.com/GabrielaSouza94/Projeto-WEB/blob/master/image2_macbook.jpg);
+}
+.promos_acessories{
+	background-size: 25% 200px;
+	background-repeat: no-repeat;
+	background-image: url("https://github.com/GabrielaSouza94/Projeto-WEB/blob/master/image3_accessories.jpg");
+}
+.promos_suppliers{
+	background-size: 25% 200px;
+	background-repeat: no-repeat;
+	background-image: url("https://github.com/GabrielaaSouza94/Projeto-WEB/blob/master/image4_supplier.jpg");
+}
 .columns{
 
 }
