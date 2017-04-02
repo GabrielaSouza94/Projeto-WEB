@@ -7,7 +7,8 @@ body {
 
 .wrapper{
 	margin: 0 auto;
-	max-width: 780px;
+	max-width: 1000px;
+	/*wrapper estava pequeno entao alterei*/
 }
 
 .nav{
@@ -54,6 +55,7 @@ body {
 }
 
 .columns{
+	position: relative;
 	font-size: 10pt;
 	display: inline-block;
 }
@@ -66,6 +68,34 @@ body {
 	position: relative;
 	list-style-type: none;
 	font-weight: normal;
+}
+.shop-alinhamento{
+	box-sizing: border-box;
+	position: relative;
+	float: left;
+	margin: 0px;
+	position: 0px;
+}
+.app-alinhamento{
+	box-sizing: border-box;
+	position: relative;
+	float: left;
+}
+.edu-alinhamento{
+	box-sizing: border-box;
+	position: relative;
+	float: left;
+
+}
+.conta-alinhamento{
+	box-sizing: border-box;
+	position: relative;
+	float: left;
+}
+.sobre-alinhamento{
+	box-sizing: border-box;
+	position: relative;
+	float: left;
 }
 .footer{
 
