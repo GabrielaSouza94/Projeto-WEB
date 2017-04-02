@@ -2,6 +2,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #ccc;
+	font-family: Arial;
 }
 
 .wrapper{
@@ -36,22 +37,36 @@ body {
 .promos_mackbook{
 	background-size: 25% 200px;
 	background-repeat: no-repeat;
-	background-image: url(https://github.com/GabrielaSouza94/Projeto-WEB/blob/master/image2_macbook.jpg);
+	margin: 1px;
+	background-image: url("https://github.com/GabrielaSouza94/Projeto-WEB/blob/master/image2_macbook.jpg");
 }
 .promos_acessories{
 	background-size: 25% 200px;
 	background-repeat: no-repeat;
+	margin: 1px;
 	background-image: url("https://github.com/GabrielaSouza94/Projeto-WEB/blob/master/image3_accessories.jpg");
 }
 .promos_suppliers{
 	background-size: 25% 200px;
 	background-repeat: no-repeat;
+	margin: 1px;
 	background-image: url("https://github.com/GabrielaaSouza94/Projeto-WEB/blob/master/image4_supplier.jpg");
 }
-.columns{
 
+.columns{
+	font-size: 10pt;
+	display: inline-block;
 }
 
+.columns > ul{
+	font-weight: bold;
+
+}
+.columns > ul > li{
+	position: relative;
+	list-style-type: none;
+	font-weight: normal;
+}
 .footer{
 
 }
