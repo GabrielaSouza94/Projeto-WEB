@@ -12,7 +12,7 @@ body {
 }
 
 .nav{
-	height: 8%;
+	height: 50px;
 	width: 100%;
 	background-color: black;
 }
@@ -27,30 +27,62 @@ body {
 	background-repeat: no-repeat;
 	position: relative;
 	background-image: url("../resources/images/image5_iphone7red.png");
+	background-position: 50% 25%;
 	margin: 0;
+
 }
-
-
 .promos_wwdc{
-width: 24.8%;
-height: 200px;
-background-repeat: no-repeat;
-margin: 1px 1px 1px 1px;
-position: relative;
-float: left;
-background-image: url("../resources/images/image1_wwdc17.jpg ");
-background-position: 50% 50%;
+	width:24.8%;
+	height: 200px;
+	background-repeat: no-repeat;
+	position: relative;
+	float: left;
+	background-image: url("../resources/images/image1_wwdc17_2.jpeg");
+	margin: 1px 1px 1px 1px;
+	background-position: 50% 50%;
+}
+@media screen and (max-width 680px) {
+	.promos_wwdc{
+		width: 49.8%;
+		height: 200px;
+		display: inline-block;
+		background-image: url("../resources/images/image1_wwdc17_2.jpeg ");
+	}
+}
+@media screen and (max-width 340px) {
+	.promos_wwdc{
+		width: 100%;
+		height: 200px;
+		display: block;
+		background-image: url("../resources/images/image1_wwdc17.jpg ");
+	}
 }
 .promos_mackbook{
 	width: 24.8%;
 	height: 200px;
 	background-repeat: no-repeat;
-	margin: 1px 1px 1px 1px;
 	float: left;
 	position: relative;
-	background-image: url("../resources/images/image2_macbook.jpg");
+	background-image: url("../resources/images/image2_macbook_2.jpg");
 	background-position: 50% 50%;
 }
+@media screen and (max-width 680px) {
+	.promos_mackbook{
+		width: 49.8%;
+		height: 200px;
+		display: inline-block;
+		background-image: url("../resources/images/image2_macbook_2.jpg");
+	}
+}
+@media screen and (max-width 340px) {
+	.promos_mackbook{
+		width: 100%;
+		height: 200px;
+		display: block;
+		background-image: url("../resources/images/image2_macbook.jpg");
+	}
+}
+
 .promos_acessories{
 	width: 24.8%;
 	height: 200px;
@@ -58,8 +90,25 @@ background-position: 50% 50%;
 	margin: 1px 1px 1px 1px;
 	float: left;
 	position: relative;
-	background-image: url("../resources/images/image3_accessories.jpg");
+	background-image: url("../resources/images/image3_accessories_2.jpg");
 	background-position: 50% 50%;
+}
+@media screen and (max-width 680px) {
+	.promos_acessories{
+		width: 49.8%;
+		height: 200px;
+		display: inline-block;
+		background-image: url("../resources/images/image3_accessories_2.jpg");
+	}
+}
+@media screen and (max-width 340px) {
+	.promos_acessories{
+		width: 100%;
+		height: 200px;
+		margin-top: 1px;
+		float: block;
+		background-image: url("../resources/images/image3_accessories.jpg");
+	}
 }
 .promos_suppliers{
 	width: 24.8%;
@@ -68,10 +117,28 @@ background-position: 50% 50%;
 	margin: 1px 1px 1px 1px;
 	float: left;
 	position: relative;
-	background-image: url("../resources/images/image4_supplier.jpg");
+	background-image: url("../resources/images/image4_supplier_2.jpg");
 	background-position: 50% 50%;
 }
-
+@media screen and (max-width 680px) {
+	.promos_suppliers{
+		width: 49.8%;
+		height: 200px;
+		display: inline-block;
+		background-image: url("../resources/images/image4_supplier_2.jpg");
+	}
+}
+@media screen and (max-width 340px) {
+	.promos_suppliers{
+		width: 100%;
+		height: 200px;
+		margin-top: 1px;
+		float: none;
+		display: block;
+		background-image: url("../resources/images/image4_supplier.jpg");
+		background-position: 50% 50%;
+	}
+}
 .columns{
 	position: relative;
 	font-size: 10pt;
@@ -80,6 +147,7 @@ background-position: 50% 50%;
 }
 
 .columns > div > ul{
+	margin-left: 20%;
 	font-weight: bold;
 
 }
@@ -101,6 +169,7 @@ background-position: 50% 50%;
 	position: 0px;
 	font-size: 9pt;
 	line-height: 150%;
+	margin-left: 10%;
 }
 .app-alinhamento{
 	box-sizing: border-box;
