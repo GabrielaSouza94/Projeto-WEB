@@ -12,18 +12,62 @@ body {
 }
 
 .nav{
-	height: 8%;
-	width: 100%;
-	background-color: black;
+ 	width: 100%;
+	background-color: #333;
 }
 
-.nav-itens{
+.container{
+	list-style-type: none;
+	margin: 0 auto 0 auto;
+	padding: 0;
+	overflow: hidden;
+	top: 0;
+	width: 80%;
 
+}
+
+
+/*ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    top: 0;
+    width: 100%;
+    }*/
+
+li {
+    /*float: left;
+   	margin-left: 3.5%;
+   	margin-top: 0.4%*/
+   	float: left;
+   	display: inline-block;
+   	margin-top: 0.3%;
+   	width: 10%;
+   	text-align: center;
+   }
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 9px 5px;
+    text-decoration: none;
+    font-size: 11pt;
+  }
+
+li a:hover{
+	color: #b3b3b3;
+}
+
+li .image{
+	margin-top: 50%;
 }
 
 .telarodativa{
 	width: 100%;
-	height: 648px;
+	height: 510px;
 	background-repeat: no-repeat;
 	position: relative;
 	background-image: url("../resources/images/image5_iphone7red.png");
@@ -32,14 +76,14 @@ body {
 
 
 .promos_wwdc{
-width: 24.8%;
-height: 200px;
-background-repeat: no-repeat;
-margin: 1px 1px 1px 1px;
-position: relative;
-float: left;
-background-image: url("../resources/images/image1_wwdc17.jpg ");
-background-position: 50% 50%;
+	width: 24.8%;
+	height: 200px;
+	background-repeat: no-repeat;
+	margin: 1px 1px 1px 1px;
+	position: relative;
+	float: left;
+	background-image: url("../resources/images/image1_wwdc17.jpg ");
+	background-position: 50% 50%;
 }
 .promos_mackbook{
 	width: 24.8%;
