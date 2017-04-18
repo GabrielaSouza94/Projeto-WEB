@@ -253,6 +253,9 @@ body {
 	}
 }
 
+.links1{
+	display: none;
+}
 
 .columns{
 	position: relative;
@@ -322,28 +325,38 @@ body {
 	line-height: 150%;
 }
 
-@media screen and (max-width: 680px) {
-	.columns div ul li{
+@media screen and (max-width: 870px) {
+	.sobre-alinhamento, .conta-alinhamento, .edu-alinhamento, .app-alinhamento, .shop-alinhamento{
 		display: none;
 	}
-
-	.columns div ul{
-		display: inline-block;
+	.links2{
 		box-sizing: border-box;
-		position: relative;
-		float: left;
-		padding-left: 0;
-		font-size: 9pt;
-		line-height: 150%;
+	position: relative;
+	float: left;
+	padding-left: 0%;
+	font-size: 9pt;
+	line-height: 150%;
 	}
 
+	.links1{
+		position: relative;
+		font-size: 9pt;
+	}
 }
 @media screen and (max-width: 340px) {
-	.columns div ul li{
+	.sobre-alinhamento, .conta-alinhamento, .edu-alinhamento, .app-alinhamento, .shop-alinhamento{
 		display: none;
 	}
+	.links2{
+		box-sizing: border-box;
+	position: relative;
+	float: left;
+	padding-left: 0%;
+	font-size: 9pt;
+	line-height: 150%;
+	}
 
-	.columns div ul{
+	.links1{
 		position: relative;
 		font-size: 9pt;
 	}
