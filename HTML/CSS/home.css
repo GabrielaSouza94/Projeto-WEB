@@ -478,13 +478,9 @@ body {
 	text-decoration: underline;
 }
 
-.footer div img{
-	padding-left: 15%;
-	margin-top: 0%;
-}
 
 .foot1{
-	position: relative;
+	/*position: relative;*/
     text-align: left;
     font-size: 8.5pt;
     font-weight: normal;
@@ -497,7 +493,7 @@ body {
 }
 
 .foot2{
-	position: relative;
+	/*position: relative;*/
     text-align: left;
     font-size: 8.5pt;
     font-weight: normal;
@@ -511,6 +507,27 @@ body {
 	 padding-left: 1%;
 }
 
+.foot2 img{
+	padding-left: 15%;
+	margin-top: 0%;
+	padding-right: 7%;
+}
+
+.foot3{
+	position: relative;
+   /* text-align: left;*/
+    font-size: 8.5pt;
+    font-weight: normal;
+	color: #696969;
+	/*padding-left: 13%;*/
+}
+
+.foot3 > a{
+	 color: #424242;
+	/* padding-right: 1%;
+	 padding-left: 1%;*/
+}
+
 /*HR são as linhas usadas para separar os links */
 
 .hr1 {
@@ -522,3 +539,37 @@ body {
     	/*padding-left: 0.8%;
     	margin-right: 70%;*/
 }
+
+@media screen and (max-width: 995px) {
+	/*.footer div img{
+	margin-left: 0%;
+	margin-top: 0%;
+	}
+
+	.foot2{
+		float: left;
+		position: relative;
+		text-align: left;
+		font-size: 8.5pt;
+		font-weight: normal;
+		color: #696969;
+		/*padding-left: 3%;
+	}
+
+	.foot3{
+		position: relative;
+		float: left;
+		/* text-align: left;
+		font-size: 8.5pt;
+		font-weight: normal;
+		color: #696969;
+		/*padding-left: 5%;
+	}
+
+	/*hr1 é a linha entre o foot1 e o foot2
+	.hr1 {
+		display: none;
+    }*/
+}
+@media screen and (max-width: 875px) {}
+@media screen and (max-width: 340px) {}
