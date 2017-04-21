@@ -38,7 +38,7 @@ body {
     /*float: left;
    	margin-left: 3.5%;
    	margin-top: 0.4%*/
-   	float: none;
+   	float: center;
    	display: inline-block;
    	margin-top: 0%;
    	width: 4%;
@@ -61,7 +61,13 @@ body {
 	color: #b3b3b3;
 }
 
-.screen2{
+.screen-menu{
+	display: none;
+}
+.screen-apple{
+	display: none;
+}
+.screen-shop{
 	display: none;
 }
 
@@ -75,8 +81,8 @@ body {
 		display: none;
 	}
 
-	.screen2{
-		float: none;
+	.screen-menu{
+		float: left;
 		display: inline-block;
 		margin-top: 0%;
 		width: 4%;
@@ -86,20 +92,28 @@ body {
 		padding: 10px 1px;
 	}
 
-	.screen2 a #menu{
-   		float: right;
-   		text-align: right;
+	.screen-apple{
+		float: center;
+		display: inline-block;
+		margin-top: 0%;
+		width: 4%;
+		margin-left: 3%;
+		margin-right: 3%;
+		height: 100%;
+		padding: 10px 1px;
 	}
 
-	.screen2 a #apple{
-   		float: center;
-   		text-align: center;
+	.screen-shop{
+		float: right;
+		display: inline-block;
+		margin-top: 0%;
+		width: 4%;
+		margin-left: 3%;
+		margin-right: 3%;
+		height: 100%;
+		padding: 10px 1px;
 	}
 
-	.screen2 a #shop{
-   		float: left;
-   		text-align: left;
-	}
 }
 /*TRATANDO A RESPONSIVIDADE DA NAV BAR*/
 @media screen and (max-width: 400px) {
