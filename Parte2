@@ -1,0 +1,22 @@
+PROJETO 2 - Servlets
+Nessa segunda etapa do Projeto Pratico, deve ser utilizado o resultado da etapa anterior (PROJETO 1 - HTML e CSS).
+
+Devem ser desenvolvidas as seguinte funcionalidades no lado servidorde uma aplicacao web,
+tendo como base a interface desenvolvida no PROJETO 1 - HTML e CSS:
+Login : realizacao do login da aplicacao utilizando o conceito de Sessao. 
+Cadastramento de usuarios : pagina web que contem um formulario para cadastro do usuario.
+O formulario deve apresentar validacao de existencia dos campos, verificacao de unicidade do login e email.
+O sistema tambem deve contemplar um cadastro de endereco para o usuario. 
+Publicacao de conteudos para o administrador : o usuario deve ser capaz de publicar conteudos textuais,
+imagens e videos no seu prprio perfil. Podem ser utilizados recursos de HTML5,
+juntamente com tecnologias de upload de imagens e videos para o servidor para implementar essa funcionalidade. 
+O envio de arquivos deve ser realizado utilizando a funcionalidade de upload de arquivos em uma aplicacao web. 
+Busca de conteudo : cada usuario deve ser capaz de realizar buscas nos conteudos publicados.
+
+Nessa etapa, o projeto sera avaliado de acordo com os seguinte requisitos: 
+• Atendimento as diretrizes de desenvolvimento web apresentadas durante as aulas. 
+• A utilizac¸ao de Frameworks de desenvolvimento de aplicacoes web sera permitida, apenas com autorizac¸ao previa do professor. 
+• Verificac¸ao de preenchimento de campos obrigatorios. 
+• Validac¸ao de unicidade e autenticidade de campos como email e login. 
+• Permissao de publicac¸ ˜ ao apenas ao adminstrador do sistema, verificada com o uso de sessoes. 
+• Instalacao da pagina web em algum servico de hospedagem de aplicacoes web (SUGESTAO de servic¸o: HEROKU).
