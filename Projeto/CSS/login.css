@@ -35,6 +35,8 @@ body {
 	top: 0;
 	width: 95%;
 	text-align: center;
+	height: 42px;
+
 }
 
 .screen1 {
@@ -61,96 +63,12 @@ body {
 	color: #b3b3b3;
 }
 
-.screen-menu{
-	display: none;
-}
 .screen-apple{
 	display: none;
 }
-.screen-shop{
-	display: none;
-}
 
 
-@media screen and (max-width: 680px) {
-	.screen1{
-		display: none;
-	}
 
-	.screen1 a{
-		display: none;
-	}
-
-	.screen-menu{
-		float: left;
-		display: inline-block;
-		margin-top: 0%;
-		width: 4%;
-		margin-left: 3%;
-		margin-right: 3%;
-		height: 100%;
-		padding: 10px 1px;
-	}
-
-	.screen-apple{
-		float: center;
-		display: inline-block;
-		margin-top: 0%;
-		width: 4%;
-		margin-left: 3%;
-		margin-right: 3%;
-		height: 100%;
-		padding: 10px 1px;
-	}
-
-	.screen-shop{
-		float: right;
-		display: inline-block;
-		margin-top: 0%;
-		width: 4%;
-		margin-left: 3%;
-		margin-right: 3%;
-		height: 100%;
-		padding: 10px 1px;
-	}
-
-}
-
-@media screen and (max-width: 400px) {
-	.screen1{
-		display: none;
-	}
-
-	.screen1 a{
-		display: none;
-	}
-
-	.screen2{
-		float: none;
-		display: inline-block;
-		margin-top: 0%;
-		width: 4%;
-		margin-left: 3%;
-		margin-right: 3%;
-		height: 100%;
-		padding: 10px 1px;
-	}
-
-	.screen2 a #menu{
-   		float: right;
-   		text-align: right;
-	}
-
-	.screen2 a #apple{
-   		float: center;
-   		text-align: center;
-	}
-
-	.screen2 a #shop{
-   		float: left;
-   		text-align: left;
-	}
-}
 /*<<<< CSS NAV BAR*/
 
 /*CSS FOOTER >>>>*/
@@ -330,5 +248,34 @@ body {
 	border-color: #1CA347;
 }
 
+/*TRATANDO A RESPONSIVIDADE DO CONTAINER DE LOGIN*/
+@media screen and (max-width: 995px) {
+	.col-md-offset-3 {
+    margin-left: 20%;
+	}
+	.col-md-6 {
+    	width: 60%;
+	}
+}
+/*TRATANDO A RESPONSIVIDADE DO CONTAINER DE LOGIN*/
+@media screen and (max-width: 680px) {
+	.col-md-offset-3 {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+	.col-md-6 {
+    	width: 70%;
+	}
+}
+/*TRATANDO A RESPONSIVIDADE DO CONTAINER DE LOGIN*/
+@media screen and (max-width: 550px) {
+	.col-md-offset-3 {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+	.col-md-6 {
+    	width: 90%;
+	}
+}
 
 /* <<<<<< CSS LOGIN BOX*/
