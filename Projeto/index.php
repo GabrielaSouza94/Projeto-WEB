@@ -16,13 +16,13 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-	<link rel="stylesheet" type="text/css" href="./CSS/login.css"/>
-	<script language="JavaScript" type="text/javascript" src="./JS/login.js"></script>
+	<link rel="stylesheet" type="text/css" href="./CSS/index.css"/>
+	<script language="JavaScript" type="text/javascript" src="./JS/index.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
 	<div class="wrapper">
-	
+
 		<!--Container da navBar -->
 		<div class="nav">
 			<ul class="container">
@@ -34,8 +34,23 @@
 			</ul>
 
 		</div>
-		
-
+		<!--verifica se a pagina é carregada com alguma resposta na tentativa de login/registro-->
+		<div class="warning">
+		<?php
+			//verifica se a url tem uma resposta
+			if(isset($_GET["resposta"])){
+				if($_GET["resposta"]=="success_register"){
+					echo '<div class="alert alert-success" role="alert">Cadasto realizado com sucesso !</div>';
+				}else if($_GET["resposta"]=="failure_register"){
+					echo '<div class="alert alert-danger" role="alert">Cadastro não realizado. Email já cadastrado no sistema.</div>';	
+				}else if($_GET["resposta"]=="password_fail_register"){
+					echo '<div class="alert alert-warning" role="alert">As senhas não conferem. Tente novamente.</div>';	
+				}else if($_GET["resposta"]=="failure_login"){
+					echo '<div class="alert alert-warning" role="alert">Email ou senha incorretos.</div>';	
+				}
+			}
+		?>
+		</div>
 		<!--Container de login -->
 		<div class="container2">
 			<div class="row">
@@ -55,12 +70,12 @@
 						<div class="panel-body">
 							<div class="row">
 								<div class="col-lg-12">
-									<form id="login-form" action="http://phpoll.com/login/process" method="post" role="form" style="display: block;">
+									<form id="login-form" action="login.php" method="post" role="form" style="display: block;">
 										<div class="form-group">
-											<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+											<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="" required>
 										</div>
 										<div class="form-group">
-											<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+											<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required>
 										</div>
 										<div class="form-group text-center">
 											<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
@@ -73,28 +88,30 @@
 												</div>
 											</div>
 										</div>
-										<div class="form-group">
+										<!--<div class="form-group">
 											<div class="row">
 												<div class="col-lg-12">
 													<div class="text-center">
-														<a href="http://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+														<a href="login.php" tabindex="5" class="forgot-password">Forgot Password?</a>
 													</div>
 												</div>
 											</div>
-										</div>
+										</div>-->
 									</form>
-									<form id="register-form" action="http://phpoll.com/register/process" method="post" role="form" style="display: none;">
+
+
+									<form id="register-form" action="register.php" method="post" role="form" style="display: none;">
 										<div class="form-group">
-											<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+											<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" required>
 										</div>
 										<div class="form-group">
-											<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+											<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="" required>
 										</div>
 										<div class="form-group">
-											<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+											<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required>
 										</div>
 										<div class="form-group">
-											<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+											<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" required>
 										</div>
 										<div class="form-group">
 											<div class="row">
