@@ -71,7 +71,26 @@ body {
 
 /*<<<< CSS NAV BAR*/
 
+/*CSS UPLOAD BAR BOOTSTRAP*/
+/* layout.css Style */
+.upload-drop-zone {
+  height: 200px;
+  border-width: 2px;
+  margin-bottom: 20px;
+}
 
+/* skin.css Style*/
+.upload-drop-zone {
+  color: #ccc;
+  border-style: dashed;
+  border-color: #ccc;
+  line-height: 200px;
+  text-align: center
+}
+.upload-drop-zone.drop {
+  color: #222;
+  border-color: #222;
+}
 /*CSS FOOTER >>>>*/
 
 .footer {
@@ -151,7 +170,7 @@ body {
     margin-right: 30%;
     margin-bottom: 30%;
     width: 40%;
-    height: 15%;
+    height: 30%;
 }
 
 /*TRATANDO A RESPONSIVIDADE DA BOX*/
@@ -196,5 +215,3 @@ body {
     }
 }
 /*<<<<<CSS BOX*/
-
-
