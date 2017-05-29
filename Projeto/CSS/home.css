@@ -162,13 +162,13 @@ body {
 	margin: 0;
 
 }
-.promos_wwdc{
+.promos_wwdc img{
 	width:24.8%;
 	height: 200px;
 	background-repeat: no-repeat;
 	position: relative;
 	float: left;
-	background-image: url("../resources/images/image1_wwdc17_2.jpeg");
+	/*background-image: url("../resources/images/image1_wwdc17_2.jpeg");*/
 	margin: 1px 1px 1px 1px;
 	background-position: 50% 50%;
 }
@@ -189,15 +189,16 @@ body {
 		background-image: url("../resources/images/image1_wwdc17.jpg ");
 	}
 }
-.promos_mackbook{
+.promos_mackbook img{
 	width: 24.8%;
 	height: 200px;
 	background-repeat: no-repeat;
 	margin: 1px 1px 1px 1px;
 	float: left;
 	position: relative;
-	background-image: url("../resources/images/image2_macbook_2.jpg");
+	/*background-image: url("../resources/images/image2_macbook_2.jpg");*/
 	background-position: 50% 50%;
+
 }
 @media screen and (max-width: 995px) {
 	.promos_mackbook{
@@ -216,14 +217,14 @@ body {
 	}
 }
 
-.promos_acessories{
+.promos_acessories img{
 	width: 24.8%;
 	height: 200px;
 	background-repeat: no-repeat;
 	margin: 1px 1px 1px 1px;
 	float: left;
 	position: relative;
-	background-image: url("../resources/images/image3_accessories_2.jpg");
+	/*background-image: url("../resources/images/image3_accessories_2.jpg");*/
 	background-position: 50% 50%;
 }
 @media screen and (max-width: 995px) {
@@ -243,15 +244,26 @@ body {
 		background-image: url("../resources/images/image3_accessories.jpg");
 	}
 }
-.promos_suppliers{
+.promos_suppliers img{
 	width: 24.8%;
 	height: 200px;
 	background-repeat: no-repeat;
 	margin: 1px 1px 1px 1px;
 	float: left;
 	position: relative;
-	background-image: url("../resources/images/image4_supplier_2.jpg");
+	/*background-image: url("../resources/images/image4_supplier_2.jpg");*/
 	background-position: 50% 50%;
+}
+img .promos_suppliers{
+	width: 24.8%;
+	height: 200px;
+	/*background-repeat: no-repeat;*/
+	margin: 1px 1px 1px 1px;
+	float: left;
+	position: relative;
+	/*background-image: url("../resources/images/image4_supplier_2.jpg");*/
+	background-position: 50% 50%;
+}
 }
 @media screen and (max-width: 995px) {
 	.promos_suppliers{
@@ -398,7 +410,7 @@ body {
     	color: #2E2E2E;
     	text-decoration: none;
     }
-    
+
     .links1{ /*RELATIVO  À UL*/
     	padding-left: 5%;
 		padding-right: 5%;
@@ -407,8 +419,8 @@ body {
     /*HR são as linhas usadas para separar os links */
 
 	.hr2 {
-    	color: #6E6E6E; 
-    	width: 100%; 
+    	color: #6E6E6E;
+    	width: 100%;
     	height: 1px;
     	/*padding-left: 0.8%;
     	margin-right: 70%;*/
@@ -453,8 +465,8 @@ body {
     /*HR são as linhas usadas para separar os links */
 
 	.hr2 {
-    	color: #6E6E6E; 
-    	width: 100%; 
+    	color: #6E6E6E;
+    	width: 100%;
     	height: 1px;
     	/*padding-left: 0.8%;
     	margin-right: 70%;*/
@@ -531,8 +543,8 @@ body {
 /*HR são as linhas usadas para separar os links */
 
 .hr1 {
-    	color: #6E6E6E; 
-    	width: 80%; 
+    	color: #6E6E6E;
+    	width: 80%;
     	height: 1px;
     	margin-left: 13%;
     	margin-bottom: 0.5%;
