@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -6,7 +9,7 @@
 	<meta name="author" content="Gabriela e Gabriel"></meta>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
-	<link rel="stylesheet" type="text/css" href="./CSS/home.css" />
+	<link rel="stylesheet" type="text/css" href="home.css" />
 	<link rel="shortcut icon" href="resources/images/favicon.ico">
 </head>
 
@@ -44,22 +47,39 @@
 				</li>
 			</ul>
 		</div>
+
+
 		<!--imagem rotativas-->
 		<div class="telarodativa">
 		</div>
 		<!--imagens publicitarias-->
-		<div class="promos_wwdc">
-			<img src="../resources/images/image1_wwdc17_2.jpeg" alt="WWDC 2017" >
-		</div>
-		<div class="promos_mackbook">
-			<img src="../resources/images/image2_macbook_2.jpg" alt="Macbok">
-		</div>
-		<div class="promos_acessories">
-			<img src="../resources/images/image3_accessories_2.jpg" alt="Acessories">
-		</div>
-		<div class="promos_suppliers">
-			<img src="../resources/images/image4_supplier_2.jpg" alt="Suppliers">
-		</div>
+		<?php
+		include'dbh.php'; 
+
+		$sql = "SELECT * FROM tabela_imagens ORDER BY codigo DESC LIMIT 0, 1;";
+		$result = mysqli_query($conn,$sql);
+		$row1 = mysqli_fetch_object($result); 
+
+		$sql = "SELECT * FROM tabela_imagens ORDER BY codigo DESC LIMIT 1, 2;";
+		$result = mysqli_query($conn,$sql);
+		$row2 = mysqli_fetch_object($result);
+
+		$sql = "SELECT * FROM tabela_imagens ORDER BY codigo DESC LIMIT 2, 3;";
+		$result = mysqli_query($conn,$sql);
+		$row3 = mysqli_fetch_object($result);
+
+		$sql = "SELECT * FROM tabela_imagens ORDER BY codigo DESC LIMIT 3, 4;";
+		$result = mysqli_query($conn,$sql);
+		$row4 = mysqli_fetch_object($result);
+
+		?>
+		<div class="promos_wwdc"> <?php echo '<img src="ver_img.php? id='.$row1->codigo.'">'; ?> </div>
+		<div class="promos_mackbook"> <?php echo '<img src="ver_img.php? id='.$row2->codigo.'">'; ?> </div>
+		<div class="promos_acessories"> <?php echo '<img src="ver_img.php? id='.$row3->codigo.'">'; ?> </div>
+		<div class="promos_suppliers"> <?php echo '<img src="ver_img.php? id='.$row4->codigo.'">'; ?> </div>
+
+		
+
 		<!--Ródape-->
 		<div class=" columns">
 			<div class="links1">

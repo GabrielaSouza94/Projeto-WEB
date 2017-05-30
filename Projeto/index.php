@@ -27,9 +27,9 @@
 		<div class="nav">
 			<ul class="container">
 
-				<li class="screen1"><a href="home.html"><img src="resources/images/apple.PNG" alt="Apple" style="width:19px;height:21px"></a></li>
+				<li class="screen1"><a href="home.php"><img src="resources/images/apple.PNG" alt="Apple" style="width:19px;height:21px"></a></li>
 
-				<li class="screen-apple"><a href="home.html"><img src="resources/images/apple.PNG" alt="Apple" style="width:19px;height:21px"></a></li>
+				<li class="screen-apple"><a href="home.php"><img src="resources/images/apple.PNG" alt="Apple" style="width:19px;height:21px"></a></li>
 				
 			</ul>
 
@@ -149,6 +149,6 @@
 		
 
 	</div>
-	<script type="text/javascript" src="./JS/login.js"></script>
+	<script type="text/javascript" src="./JS/index.js"></script>
 </body>
 </html>

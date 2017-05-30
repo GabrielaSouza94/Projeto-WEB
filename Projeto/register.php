@@ -9,8 +9,7 @@ $confirmpassword = $_POST['confirm-password'];
 
 
 if($password == $confirmpassword){  //se as senhas conferem
-	$sql = "INSERT INTO users (email,username, password)  
-	VALUES ('$email','$username','$password')"; //guarda o comando sql para criar um novo usuário com os parâmetros pegos atavés do POST
+	$sql = "INSERT INTO users (email,username, password) VALUES ('$email','$username','$password')"; //guarda o comando sql para criar um novo usuário com os parâmetros pegos atavés do POST
 
 	$result = mysqli_query($conn,$sql);
 	//echo "$result" . "resultado";

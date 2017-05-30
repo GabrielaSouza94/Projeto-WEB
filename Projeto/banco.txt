@@ -4,10 +4,7 @@ CREATE TABLE users(
     password varchar(1000) not null
 );
 
-CREATE TABLE images(
-	id int(10) not null PRIMARY KEY,//coloque esse atributo como auto incremental
-	nome_evento VARCHAR(50) not null,
-	nome_img VARCHAR(20) not null,
-	imagem LONGBLOB not null
-);
-
+CREATE TABLE tabela_imagens (
+  `codigo` int(10)NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `imagem` longblob NOT NULL
+  ) ENGINE=InnoDB ;
