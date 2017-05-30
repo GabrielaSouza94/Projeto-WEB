@@ -5,6 +5,7 @@ $imagem = $_FILES["imagem"];
 
 if($imagem != NULL) { 
 	$nomeFinal = time().'.jpg';
+
 	if (move_uploaded_file($imagem['tmp_name'], $nomeFinal)) {
 		$tamanhoImg = filesize($nomeFinal); 
 

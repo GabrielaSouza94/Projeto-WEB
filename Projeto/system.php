@@ -114,7 +114,7 @@ session_start();
 						<?php echo $row->codigo ?>
 						</td>
 
-						<td align="center" class="coluna22" style=" width:50% ">
+						<td align="center" class="coluna22" style=" width:50% ; text-align: center;">
 							<div class="row">
 								<div class="col-xs-6 col-md-3">
 									<a href="#" class="thumbnail">

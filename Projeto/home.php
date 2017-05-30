@@ -73,10 +73,10 @@ session_start();
 		$row4 = mysqli_fetch_object($result);
 
 		?>
-		<div class="promos_wwdc"> <?php echo '<img src="ver_img.php? id='.$row1->codigo.'">'; ?> </div>
-		<div class="promos_mackbook"> <?php echo '<img src="ver_img.php? id='.$row2->codigo.'">'; ?> </div>
-		<div class="promos_acessories"> <?php echo '<img src="ver_img.php? id='.$row3->codigo.'">'; ?> </div>
-		<div class="promos_suppliers"> <?php echo '<img src="ver_img.php? id='.$row4->codigo.'">'; ?> </div>
+		<div class="promos_wwdc"> <?php echo '<img src="ver_img.php? id='.$row1->codigo.' " class="promos_wwdc_img" >'; ?> </div>
+		<div class="promos_mackbook"> <?php echo '<img src="ver_img.php? id='.$row2->codigo.'" class="promos_mackbook_img" >'; ?> </div>
+		<div class="promos_acessories"> <?php echo '<img src="ver_img.php? id='.$row3->codigo.'" class="promos_acessories_img" >'; ?> </div>
+		<div class="promos_suppliers"> <?php echo '<img src="ver_img.php? id='.$row4->codigo.'" class="promos_suppliers_img" >'; ?> </div>
 
 		
 

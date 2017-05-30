@@ -163,6 +163,22 @@ body {
 
 }
 
+.promos_wwdc_img{
+	width: 100%;
+	height: 100%;
+}
+.promos_mackbook_img{
+	width: 100%;
+	height: 100%;
+}
+.promos_acessories_img{
+	width: 100%;
+	height: 100%;
+}
+.promos_suppliers_img{
+	width: 100%;
+	height: 100%;
+}
 
 .promos_wwdc{
 	width:24.8%;
