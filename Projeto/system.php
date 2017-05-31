@@ -19,7 +19,7 @@ session_start();
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-	<link rel="stylesheet" type="text/css" href="./CSS/system.css"/>
+	<link rel="stylesheet" type="text/css" href="system.css"/>
 	
 </head>
 <body>
@@ -57,13 +57,15 @@ session_start();
 				}else if($_GET["resposta"]=="failure_register"){
 					echo '<div class="alert alert-danger" role="alert">Cadastro não realizado..</div>';	
 				}else if($_GET["resposta"]=="naopassouid"){
-					echo '<div class="alert alert-danger" role="alert">O ID DA IMAGEM NAO FOI </div>';	
+					echo '<div class="alert alert-danger" role="alert">Erro ao envar imagem </div>';	
 				}else if($_GET["resposta"]=="foto"){
-					echo '<div class="alert alert-success" role="alert">a foto ta la</div>';	
+					echo '<div class="alert alert-success" role="alert">Imagem enviada</div>';	
 				}else if($_GET["resposta"]=="failure_exclude"){
 					echo '<div class="alert alert-danger" role="alert">Falha na exclusão da imagem.</div>';	
 				}else if($_GET["resposta"]=="success_exclude"){
 					echo '<div class="alert alert-success" role="alert">Imagem excluida !</div>';	
+				}else if($_GET["resposta"]=="oversized"){
+					echo '<div class="alert alert-warning" role="alert">Imagem escolhida tem tamanho superior ao permitido. Escolha uma imagem com no máximo 65 Kbytes</div>';	
 				}
 			}
 			?>
@@ -77,6 +79,7 @@ session_start();
 				<!--Formulario de envio de imagens-->
 				<form  action="image.php" method="post" enctype="multipart/form-data">
 					<div class="form-group">
+						<input type="hidden" name="MAX_FILE_SIZE" value="550000"/>
 						<input name="imagem" type="file">
 					</div>
 					<button type="submit" class="btn btn-default" value="Salvar">Enviar</button>
