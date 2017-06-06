@@ -58,8 +58,6 @@ session_start();
 					echo '<div class="alert alert-danger" role="alert">Cadastro não realizado..</div>';	
 				}else if($_GET["resposta"]=="naopassouid"){
 					echo '<div class="alert alert-danger" role="alert">Erro ao envar imagem </div>';	
-				}else if($_GET["resposta"]=="foto"){
-					echo '<div class="alert alert-success" role="alert">Imagem enviada</div>';	
 				}else if($_GET["resposta"]=="failure_exclude"){
 					echo '<div class="alert alert-danger" role="alert">Falha na exclusão da imagem.</div>';	
 				}else if($_GET["resposta"]=="success_exclude"){
