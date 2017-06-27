@@ -20,7 +20,7 @@ session_start();
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 	<link rel="stylesheet" type="text/css" href="./CSS/system.css"/>
-	
+
 </head>
 <body>
 	<div class="wrapper">
@@ -32,7 +32,7 @@ session_start();
 				<li class="screen1"><a href="home.php"><img src="resources/images/apple.PNG" alt="Apple" style="width:19px;height:21px"></a></li>
 
 				<li class="screen-apple"><a href="home.php"><img src="resources/images/apple.PNG" alt="Apple" style="width:19px;height:21px"></a></li>
-				
+
 			</ul>
 
 		</div>
@@ -55,15 +55,13 @@ session_start();
 				if($_GET["resposta"]=="success_register"){
 					echo '<div class="alert alert-success" role="alert">Cadasto realizado com sucesso !</div>';
 				}else if($_GET["resposta"]=="failure_register"){
-					echo '<div class="alert alert-danger" role="alert">Cadastro não realizado..</div>';	
+					echo '<div class="alert alert-danger" role="alert">Cadastro não realizado..</div>';
 				}else if($_GET["resposta"]=="naopassouid"){
-					echo '<div class="alert alert-danger" role="alert">O ID DA IMAGEM NAO FOI </div>';	
-				}else if($_GET["resposta"]=="foto"){
-					echo '<div class="alert alert-success" role="alert">a foto ta la</div>';	
+					echo '<div class="alert alert-danger" role="alert">O ID DA IMAGEM NAO FOI </div>';
 				}else if($_GET["resposta"]=="failure_exclude"){
-					echo '<div class="alert alert-danger" role="alert">Falha na exclusão da imagem.</div>';	
+					echo '<div class="alert alert-danger" role="alert">Falha na exclusão da imagem.</div>';
 				}else if($_GET["resposta"]=="success_exclude"){
-					echo '<div class="alert alert-success" role="alert">Imagem excluida !</div>';	
+					echo '<div class="alert alert-success" role="alert">Imagem excluida !</div>';
 				}
 			}
 			?>
@@ -79,10 +77,18 @@ session_start();
 					<div class="form-group">
 						<input name="imagem" type="file">
 					</div>
+					<div class = "text">
+						<label for="Nome-imagem">Nome imagem</label>
+						<textarea name="rename" rows="1"></textarea>
+					</div>
+					<div class="">
+						<label for="decricao">Descrição</label>
+						<textarea name="descricao" rows="3" ></textarea>
+					</div>
+
+
 					<button type="submit" class="btn btn-default" value="Salvar">Enviar</button>
 				</form>
-
-
 
 				<br />
 
@@ -90,19 +96,21 @@ session_start();
 
 				<table border="5">
 					<tr>
-						<td align="center" class="coluna1" style="width:10% ">
+						<td align="center" class="coluna1" style="width:5% ">
 							Código
 						</td>
-						<td align="center" class="coluna2" style="width:50% ">
+						<td align="cente" style="width:15%">Nome imagem</td>
+						<td align="center" class="coluna2" style="width:25% ">
 							Visualizar imagem
 						</td>
+						<td align="center" style="width:15%">Descrição</td>
 						<td align="center" class="coluna3" style="width:15% ">
 							Excluir imagem
 						</td>
 					</tr>
-					
+
 					<?php
-					include'dbh.php'; 
+					include'dbh.php';
 
 					$sql = "SELECT * FROM tabela_imagens";
 					$result = mysqli_query($conn,$sql);
@@ -110,11 +118,13 @@ session_start();
 					while($row = mysqli_fetch_object($result)) { ?>
 
 					<tr>
-						<td align="center" class="coluna11" style=" width:10% ">
+						<td align="center" class="coluna11" style=" width:5% ">
 						<?php echo $row->codigo ?>
 						</td>
-
-						<td align="center" class="coluna22" style=" width:50% ; text-align: center;">
+						<td align="center" class="coluna27" style="width:15%;text-align:center" >
+							<?php echo "$row->nome_img"?>;
+						</td>
+						<td align="center" class="coluna22" style=" width:25% ; text-align: center; height:50px">
 							<div class="row">
 								<div class="col-xs-6 col-md-3">
 									<a href="#" class="thumbnail">
@@ -122,7 +132,10 @@ session_start();
 									</a>
 								</div>
 							</div>
-							
+
+						</td>
+						<td align="center" style="width:25%;textalign:center">
+							<?php echo "$row->descricao";?>
 						</td>
 
 						<td align="center" class="coluna33" style=" width:15% ">
@@ -130,8 +143,8 @@ session_start();
 						</td>
 
 					</tr>
-					<?php } ?> 
-					
+					<?php } ?>
+
 				</table>
 
 
@@ -139,7 +152,7 @@ session_start();
 
 		</div>
 
-		
+
 		<br/>
 	</body>
 	</html>

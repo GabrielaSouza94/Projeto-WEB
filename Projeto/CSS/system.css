@@ -97,7 +97,10 @@ body {
     color: #696969;
     padding-left: 13%;
 }
-
+.text div textarea{
+  height: 10em;
+  vertical-align: top
+}
 .foot1 > a {
     color: #0080FF;
 }
@@ -250,17 +253,22 @@ body {
 }
 /*<<<<<CSS WARNING BOX*/
 
-.coluna1{ 
+.coluna1{
     width:10% ;height:10% }
-.coluna11{ 
+.coluna11{
     width:10% ; }
 
-.coluna2{ 
+.coluna2{
     width:50% ;height:10% }
-.coluna22{ 
-    width:50% ; }
+.coluna22{
+    width:35% ;
+    height: 50px;
+  }
 
-.coluna3{ 
+.coluna3{
     width:15% ;height:10% }
-.coluna33{ 
+.coluna33{
     width:15% ; }
+.coluna27{
+  width: 15%;
+}

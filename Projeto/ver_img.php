@@ -8,13 +8,9 @@ if (isset($_GET["id"])) {
 	$result = mysqli_query($conn,$sql);
 	$row=mysqli_fetch_object($result);
 	echo $row->imagem;
-	//EXIBEIMAGEM 
+	//EXIBEIMAGEM
 	header("Content-type: image/gif");
-	if(!$row){
-		header("Location: system.php?resposta=nada"); 
-	}else{
-		header("Location: system.php?resposta=foto"); 
-	}
+	
 }else{
 	header("Location: system.php?resposta=naopassouid");
 }
