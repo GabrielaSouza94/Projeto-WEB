@@ -77,13 +77,11 @@ session_start();
 					<div class="form-group">
 						<input name="imagem" type="file">
 					</div>
-					<div class = "text">
-						<label for="Nome-imagem">Nome imagem</label>
-						<textarea name="rename" rows="1"></textarea>
+					<div class="form-group">
+						<input type="text" name="nome_img" id="nome_img" tabindex="1" class="form-control" placeholder="Username" value="" required>
 					</div>
-					<div class="">
-						<label for="decricao">Descrição</label>
-						<textarea name="descricao" rows="3" ></textarea>
+					<div class="form-group">
+						<input type="text" name="descricao_img" id="descricao_img" tabindex="1" class="form-control" placeholder="Email Address" value="" required>
 					</div>
 
 

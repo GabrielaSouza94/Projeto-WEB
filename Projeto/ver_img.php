@@ -10,7 +10,7 @@ if (isset($_GET["id"])) {
 	echo $row->imagem;
 	//EXIBEIMAGEM
 	header("Content-type: image/gif");
-	
+
 }else{
 	header("Location: system.php?resposta=naopassouid");
 }
