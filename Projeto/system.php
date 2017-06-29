@@ -78,10 +78,10 @@ session_start();
 						<input name="imagem" type="file">
 					</div>
 					<div class="form-group">
-						<input type="text" name="nome_img" id="nome_img" tabindex="1" class="form-control" placeholder="Username" value="" required>
+						<input type="text" name="nome_img" id="nome_img" tabindex="1" class="form-control" placeholder="Imagem nome" value="" required>
 					</div>
 					<div class="form-group">
-						<input type="text" name="descricao_img" id="descricao_img" tabindex="1" class="form-control" placeholder="Email Address" value="" required>
+						<input type="text" name="descricao_img" id="descricao_img" tabindex="1" class="form-control" placeholder="Descrição" value="" required>
 					</div>
 
 
