@@ -19,7 +19,7 @@ session_start();
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-	<link rel="stylesheet" type="text/css" href="./CSS/system.css"/>
+	<link rel="stylesheet" type="text/css" href="./CSS/system.css">
 
 </head>
 <body>
@@ -53,9 +53,9 @@ session_start();
 			//verifica se a url tem uma resposta
 			if(isset($_GET["resposta"])){
 				if($_GET["resposta"]=="success_register"){
-					echo '<div class="alert alert-success" role="alert">Cadasto realizado com sucesso !</div>';
+					echo '<div class="alert alert-success" role="alert">Imagem cadastrada com sucesso !</div>';
 				}else if($_GET["resposta"]=="failure_register"){
-					echo '<div class="alert alert-danger" role="alert">Cadastro não realizado..</div>';
+					echo '<div class="alert alert-danger" role="alert">Falha no cadastro da imagem.</div>';
 				}else if($_GET["resposta"]=="naopassouid"){
 					echo '<div class="alert alert-danger" role="alert">O ID DA IMAGEM NAO FOI </div>';
 				}else if($_GET["resposta"]=="failure_exclude"){
@@ -78,12 +78,11 @@ session_start();
 						<input name="imagem" type="file">
 					</div>
 					<div class="form-group">
-						<input type="text" name="nome_img" id="nome_img" tabindex="1" class="form-control" placeholder="Username" value="" required>
+						<input type="text" name="nome_img" id="nome_img" tabindex="1" class="form-control" placeholder="Nome da imagem" value="" required>
 					</div>
 					<div class="form-group">
-						<input type="text" name="descricao_img" id="descricao_img" tabindex="1" class="form-control" placeholder="Email Address" value="" required>
+						<input type="text" name="descricao_img" id="descricao_img" tabindex="1" class="form-control" placeholder="Descrição da imagem" value="" required>
 					</div>
-
 
 					<button type="submit" class="btn btn-default" value="Salvar">Enviar</button>
 				</form>
@@ -94,15 +93,19 @@ session_start();
 
 				<table border="5">
 					<tr>
-						<td align="center" class="coluna1" style="width:5% ">
+						<td align="center" class="coluna1" >
 							Código
 						</td>
-						<td align="cente" style="width:15%">Nome imagem</td>
-						<td align="center" class="coluna2" style="width:25% ">
+						<td align="center" class="coluna2" >
+							Nome imagem
+						</td>
+						<td align="center" class="coluna3" >
 							Visualizar imagem
 						</td>
-						<td align="center" style="width:15%">Descrição</td>
-						<td align="center" class="coluna3" style="width:15% ">
+						<td align="center" class="coluna4" >
+							Descrição
+						</td>
+						<td align="center" class="coluna5" >
 							Excluir imagem
 						</td>
 					</tr>
@@ -116,13 +119,13 @@ session_start();
 					while($row = mysqli_fetch_object($result)) { ?>
 
 					<tr>
-						<td align="center" class="coluna11" style=" width:5% ">
+						<td align="center" class="coluna11" >
 						<?php echo $row->codigo ?>
 						</td>
-						<td align="center" class="coluna27" style="width:15%;text-align:center" >
-							<?php echo "$row->nome_img"?>;
+						<td align="center" class="coluna22"  >
+							<?php echo $row->nome_imagem?>
 						</td>
-						<td align="center" class="coluna22" style=" width:25% ; text-align: center; height:50px">
+						<td align="center" class="coluna33">
 							<div class="row">
 								<div class="col-xs-6 col-md-3">
 									<a href="#" class="thumbnail">
@@ -132,11 +135,11 @@ session_start();
 							</div>
 
 						</td>
-						<td align="center" style="width:25%;textalign:center">
-							<?php echo "$row->descricao";?>
+						<td align="center"  class="coluna44" >
+							<?php echo $row->descricao?>
 						</td>
 
-						<td align="center" class="coluna33" style=" width:15% ">
+						<td align="center" class="coluna55">
 							<?php echo '<a href="del_img.php?id='.$row->codigo.'">Excluir</a>'; ?>
 						</td>
 
