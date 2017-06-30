@@ -56,6 +56,7 @@
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
 					<div class="panel panel-login">
+
 						<div class="panel-heading">
 							<div class="row">
 								<div class="col-xs-6">
@@ -67,9 +68,11 @@
 							</div>
 							<hr>
 						</div>
+
 						<div class="panel-body">
 							<div class="row">
 								<div class="col-lg-12">
+
 									<form id="login-form" action="login.php" method="post" role="form" style="display: block;">
 										<div class="form-group">
 											<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="" required>
@@ -88,15 +91,7 @@
 												</div>
 											</div>
 										</div>
-										<!--<div class="form-group">
-											<div class="row">
-												<div class="col-lg-12">
-													<div class="text-center">
-														<a href="login.php" tabindex="5" class="forgot-password">Forgot Password?</a>
-													</div>
-												</div>
-											</div>
-										</div>-->
+										
 									</form>
 
 
@@ -121,8 +116,11 @@
 											</div>
 										</div>
 									</form>
+
+
 								</div>
 							</div>
+
 						</div>
 					</div>
 				</div>

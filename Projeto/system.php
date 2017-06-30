@@ -20,8 +20,10 @@ session_start();
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 	<link rel="stylesheet" type="text/css" href="./CSS/system.css">
-
+	<script language="JavaScript" type="text/javascript" src="./JS/system.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
+
 <body>
 	<div class="wrapper">
 
@@ -67,93 +69,114 @@ session_start();
 			?>
 		</div>
 
-		<!--<div class="box">-->
+		<!--<div class="box"-->
 		<div class="panel panel-default">
-			<div class="panel-body">
-				<h4>Escolher imagens</h4>
-
-				<!--Formulario de envio de imagens-->
-				<form  action="image.php" method="post" enctype="multipart/form-data">
-					<div class="form-group">
-						<input name="imagem" type="file">
+				<div class="panel-heading" style="background-color: #ffffff;">
+					<div class="row">
+						<div class="col-xs-6">
+						<a href="#" class="active" id="cadastrar_img-form-link">Cadastrar Imagem</a>
+						</div>
+						<div class="col-xs-6">
+							<a href="#"  id="pesquisar_img-form-link">Pesquisar Imagem</a>
+						</div>
 					</div>
-					<div class="form-group">
-						<input type="text" name="nome_img" id="nome_img" tabindex="1" class="form-control" placeholder="Nome da imagem" value="" required>
-					</div>
-					<div class="form-group">
-						<input type="text" name="descricao_img" id="descricao_img" tabindex="1" class="form-control" placeholder="Descrição da imagem" value="" required>
-					</div>
+					<hr>
+				</div>
 
-					<button type="submit" class="btn btn-default" value="Salvar">Enviar</button>
-				</form>
+				<div class="panel-body">
 
-				<br />
+					<form id="cadastrar_img-form" action="cadastrar_img.php" method="post" enctype="multipart/form-data" style="display: block;">
+						<div class="form-group">
+							<input name="imagem" type="file" >
+						</div>
+						<div class="form-group">
+							<input type="text" name="nome_img" id="nome_img" tabindex="1" class="form-control" placeholder="Nome da imagem" value="" required>
+						</div>
+						<div class="form-group">
+							<input type="text" name="descricao_img" id="descricao_img" tabindex="1" class="form-control" placeholder="Descrição da imagem" value="" required>
+						</div>
 
-				<h4>Imagens Cadastradas</h4>
+						<button type="submit" class="btn-cadastrar" value="salvar">Enviar</button>
+					</form>
 
-				<table border="5">
-					<tr>
-						<td align="center" class="coluna1" >
-							Código
-						</td>
-						<td align="center" class="coluna2" >
-							Nome imagem
-						</td>
-						<td align="center" class="coluna3" >
-							Visualizar imagem
-						</td>
-						<td align="center" class="coluna4" >
-							Descrição
-						</td>
-						<td align="center" class="coluna5" >
-							Excluir imagem
-						</td>
-					</tr>
+					<form id="pesquisar_img-form" action="pesquisar_img.php" method="post" enctype="multipart/form-data" style="display: none;">
+						<div class="form-group">
+							<input type="text" name="nome_img" id="nome_img" tabindex="1" class="form-control" placeholder="Nome da imagem" value="" required>
+						</div>
 
-					<?php
-					include'dbh.php';
+						<button type="submit" class="btn-pesquisar" value="pesquisar">Pesquisar</button>
+					</form>
 
-					$sql = "SELECT * FROM tabela_imagens";
-					$result = mysqli_query($conn,$sql);
+
+
+					<br />
+
+					<h4>Imagens Cadastradas</h4>
+
+					<table border="5">
+						<tr>
+							<td align="center" class="coluna1" >
+								Código
+							</td>
+							<td align="center" class="coluna2" >
+								Nome imagem
+							</td>
+							<td align="center" class="coluna3" >
+								Visualizar imagem
+							</td>
+							<td align="center" class="coluna4" >
+								Descrição
+							</td>
+							<td align="center" class="coluna5" >
+								Excluir imagem
+							</td>
+						</tr>
+
+						<?php
+						include'dbh.php';
+
+						$sql = "SELECT * FROM tabela_imagens";
+						$result = mysqli_query($conn,$sql);
 					//echo $result;
-					while($row = mysqli_fetch_object($result)) { ?>
+						while($row = mysqli_fetch_object($result)) { ?>
 
-					<tr>
-						<td align="center" class="coluna11" >
-						<?php echo $row->codigo ?>
-						</td>
-						<td align="center" class="coluna22"  >
-							<?php echo $row->nome_imagem?>
-						</td>
-						<td align="center" class="coluna33">
-							<div class="row">
-								<div class="col-xs-6 col-md-3">
-									<a href="#" class="thumbnail">
-										<?php echo '<img src="ver_img.php? id='.$row->codigo.'">'; ?>
-									</a>
+						<tr>
+							<td align="center" class="coluna11" >
+								<?php echo $row->codigo ?>
+							</td>
+							<td align="center" class="coluna22"  >
+								<?php echo $row->nome_imagem?>
+							</td>
+							<td align="center" class="coluna33">
+								<div class="row">
+									<div class="col-xs-6 col-md-3">
+										<a href="#" class="thumbnail">
+											<?php echo '<img src="ver_img.php? id='.$row->codigo.'">'; ?>
+										</a>
+									</div>
 								</div>
-							</div>
 
-						</td>
-						<td align="center"  class="coluna44" >
-							<?php echo $row->descricao?>
-						</td>
+							</td>
+							<td align="center"  class="coluna44" >
+								<?php echo $row->descricao?>
+							</td>
 
-						<td align="center" class="coluna55">
-							<?php echo '<a href="del_img.php?id='.$row->codigo.'">Excluir</a>'; ?>
-						</td>
+							<td align="center" class="coluna55">
+								<?php echo '<a href="del_img.php?id='.$row->codigo.'">Excluir</a>'; ?>
+							</td>
 
-					</tr>
-					<?php } ?>
+						</tr>
+						<?php } ?>
 
-				</table>
+					</table>
 
 
-			</div>
+				</div>
 
 		</div>
 
 
 		<br/>
+		<script language="JavaScript" type="text/javascript" src="./JS/system.js"></script>
 	</body>
 	</html>
