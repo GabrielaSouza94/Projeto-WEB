@@ -91,7 +91,13 @@ session_start();
 				<br />
 
 				<h4>Imagens Cadastradas</h4>
+				<!--buscar de imagens-->
+				<form  method="post" enctype="multipart/form-data">
+					<div class="form-group">
+						<input type="text" name="pesquisa_img" id="pesq_img" tabindex="1" class="form-control" placeholder="Pesquisar image" value="" required>
+					</div>
 
+				</form>
 				<table border="5">
 					<tr>
 						<td align="center" class="coluna1" style="width:5% ">
@@ -106,7 +112,27 @@ session_start();
 							Excluir imagem
 						</td>
 					</tr>
+					<div id="progressbar">
+						<div id="bar">
+						</div>
+					</div>
+					<button onclick="move()">Click Me</button>
 
+					<script>
+						function move() {
+						  var elem = document.getElementById("myBar");
+						  var width = 1;
+						  var id = setInterval(frame, 10);
+						  function frame() {
+						    if (width >= 100) {
+						      clearInterval(id);
+						    } else {
+						      width++;
+						      elem.style.width = width + '%';
+						    }
+						  }
+						}
+					</script>
 					<?php
 					include'dbh.php';
 
@@ -120,7 +146,7 @@ session_start();
 						<?php echo $row->codigo ?>
 						</td>
 						<td align="center" class="coluna27" style="width:15%;text-align:center" >
-							<?php echo "$row->nome_img"?>;
+							<?php echo $row->nome_img?>
 						</td>
 						<td align="center" class="coluna22" style=" width:25% ; text-align: center; height:50px">
 							<div class="row">
@@ -133,7 +159,7 @@ session_start();
 
 						</td>
 						<td align="center" style="width:25%;textalign:center">
-							<?php echo "$row->descricao";?>
+							<?php echo $row->descricao?>
 						</td>
 
 						<td align="center" class="coluna33" style=" width:15% ">

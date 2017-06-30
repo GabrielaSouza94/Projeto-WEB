@@ -1,7 +1,6 @@
 <?php
 session_start();
 include("dbh.php");
-<<<<<<< HEAD
 $imagem = $_FILES["imagem"];
 $nome = $_POST['nome_img'];
 $descricao = $_POST['descricao_img'];
@@ -11,18 +10,6 @@ if($imagem != NULL) {
 
 	if (move_uploaded_file($imagem['tmp_name'], $nomeFinal)) {
 		$tamanhoImg = filesize($nomeFinal);
-=======
-$imagem = $_FILES["imagem"]; //carrega o arquivo de imagem na forma de um vetor de bytes
-//$maxsize = $_POST["MAX_FILE_SIZE"]; //carrega um valor pré estabelecido maximo para o tamanho das imagens
-
- if($imagem != NULL) {  //verifica se teve uma imagem carregada
-
- 	$nomeFinal = time().'.jpg';
-
- 	if (move_uploaded_file($imagem['tmp_name'], $nomeFinal)) {
-
-		$tamanhoImg = filesize($nomeFinal); //guarda numa variael o tamanho do arquivo da imagem para armazená-la no banco
->>>>>>> 9a325cc9795836204d859d0fc820df3b5f4d8196
 
 		$mysqlImg = addslashes(fread(fopen($nomeFinal, "r"), $tamanhoImg));
 
