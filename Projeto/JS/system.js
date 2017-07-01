@@ -14,5 +14,7 @@ $(function() {
 		$(this).addClass('active');
 		e.preventDefault();
 	});
+  $('#tabela_img').hide();
 
+//  $('#tabela_img').show();
 });
