@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<link rel="shortcut icon" href="resources/images/favicon.ico">
-	
+
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -30,7 +30,7 @@
 				<li class="screen1"><a href="home.php"><img src="resources/images/apple.PNG" alt="Apple" style="width:19px;height:21px"></a></li>
 
 				<li class="screen-apple"><a href="home.php"><img src="resources/images/apple.PNG" alt="Apple" style="width:19px;height:21px"></a></li>
-				
+
 			</ul>
 
 		</div>
@@ -42,11 +42,11 @@
 				if($_GET["resposta"]=="success_register"){
 					echo '<div class="alert alert-success" role="alert">Cadasto realizado com sucesso !</div>';
 				}else if($_GET["resposta"]=="failure_register"){
-					echo '<div class="alert alert-danger" role="alert">Cadastro não realizado. Email já cadastrado no sistema.</div>';	
+					echo '<div class="alert alert-danger" role="alert">Cadastro não realizado. Email já cadastrado no sistema.</div>';
 				}else if($_GET["resposta"]=="password_fail_register"){
-					echo '<div class="alert alert-warning" role="alert">As senhas não conferem. Tente novamente.</div>';	
+					echo '<div class="alert alert-warning" role="alert">As senhas não conferem. Tente novamente.</div>';
 				}else if($_GET["resposta"]=="failure_login"){
-					echo '<div class="alert alert-warning" role="alert">Email ou senha incorretos.</div>';	
+					echo '<div class="alert alert-warning" role="alert">Email ou senha incorretos.</div>';
 				}
 			}
 		?>
@@ -56,6 +56,7 @@
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
 					<div class="panel panel-login">
+
 						<div class="panel-heading">
 							<div class="row">
 								<div class="col-xs-6">
@@ -67,9 +68,11 @@
 							</div>
 							<hr>
 						</div>
+
 						<div class="panel-body">
 							<div class="row">
 								<div class="col-lg-12">
+
 									<form id="login-form" action="login.php" method="post" role="form" style="display: block;">
 										<div class="form-group">
 											<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="" required>
@@ -88,15 +91,7 @@
 												</div>
 											</div>
 										</div>
-										<!--<div class="form-group">
-											<div class="row">
-												<div class="col-lg-12">
-													<div class="text-center">
-														<a href="login.php" tabindex="5" class="forgot-password">Forgot Password?</a>
-													</div>
-												</div>
-											</div>
-										</div>-->
+
 									</form>
 
 
@@ -121,8 +116,11 @@
 											</div>
 										</div>
 									</form>
+
+
 								</div>
 							</div>
+
 						</div>
 					</div>
 				</div>
@@ -136,17 +134,17 @@
 
 			<div class="hr1"><hr /></div>
 
-			<div class="foot2">Copyright © 2017 Apple Inc. All rights reserved. 
+			<div class="foot2">Copyright © 2017 Apple Inc. All rights reserved.
 
 
 				<span class="foot3"><a href="#Privacy Policy">Privacy Policy</a> | <a href="#Terms of Use">Terms of Use</a> | <a href="#Sales and Refunds">Sales and Refunds</a> | <a href="#Legal ">Legal</a> | <a href="#Site Map">Site Map</a></span>
 
-				<img src="resources/images/usa.PNG" alt="USA flag" > <a href="#United States">  United States</a> 
+				<img src="resources/images/usa.PNG" alt="USA flag" > <a href="#United States">  United States</a>
 
 			</div>
 		</div>
 		<br/>
-		
+
 
 	</div>
 	<script type="text/javascript" src="./JS/index.js"></script>
