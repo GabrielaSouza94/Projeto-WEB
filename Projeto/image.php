@@ -1,12 +1,11 @@
 <?php
 session_start();
 include("dbh.php");
-<<<<<<< HEAD
-$imagem = $_FILES["imagem"];
-=======
+
+
 
 $imagem = $_FILES["imagem"]; //carrega o arquivo de imagem na forma de um vetor de bytes
->>>>>>> 2501cc066b2438cfd2f17cad4b893c4a19a126ad
+
 $nome = $_POST['nome_img'];
 $descricao = $_POST['descricao_img'];
 

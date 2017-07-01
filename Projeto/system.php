@@ -80,7 +80,6 @@ session_start();
 							<a href="#"  id="pesquisar_img-form-link">Pesquisar Imagem</a>
 						</div>
 					</div>
-
 					<div class="form-group">
 						<input type="text" name="nome_img" id="nome_img" tabindex="1" class="form-control" placeholder="Imagem nome" value="" required>
 					</div>
@@ -116,27 +115,7 @@ session_start();
 							Excluir imagem
 						</td>
 					</tr>
-					<div id="progressbar">
-						<div id="bar">
-						</div>
-					</div>
-					<button onclick="move()">Click Me</button>
 
-					<script>
-						function move() {
-						  var elem = document.getElementById("myBar");
-						  var width = 1;
-						  var id = setInterval(frame, 10);
-						  function frame() {
-						    if (width >= 100) {
-						      clearInterval(id);
-						    } else {
-						      width++;
-						      elem.style.width = width + '%';
-						    }
-						  }
-						}
-					</script>
 					<?php
 					include'dbh.php';
 
@@ -233,20 +212,12 @@ session_start();
 											<?php echo '<img src="ver_img.php? id='.$row->codigo.'">'; ?>
 										</a>
 									</div>
->>>>>>> 2501cc066b2438cfd2f17cad4b893c4a19a126ad
-								</div>
 
-<<<<<<< HEAD
-						</td>
-						<td align="center" style="width:25%;textalign:center">
-							<?php echo $row->descricao?>
-						</td>
-=======
 							</td>
 							<td align="center"  class="coluna44" >
 								<?php echo $row->descricao?>
 							</td>
->>>>>>> 2501cc066b2438cfd2f17cad4b893c4a19a126ad
+
 
 							<td align="center" class="coluna55">
 								<?php echo '<a href="del_img.php?id='.$row->codigo.'">Excluir</a>'; ?>
