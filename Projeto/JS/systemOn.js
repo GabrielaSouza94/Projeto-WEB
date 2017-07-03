@@ -13,5 +13,6 @@ $(function() {
 		$('#cadastrar_img-form-link').removeClass('active');
 		$(this).addClass('active');
 		e.preventDefault();
+    $('#tabela_img').hide();
 	})
 });

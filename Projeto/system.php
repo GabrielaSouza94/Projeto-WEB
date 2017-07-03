@@ -70,6 +70,7 @@ session_start();
 		</div>
 
 		<!--<div class="box"-->
+		<!--ON-DEMAND para carrega o javascript-->
 		<script type="text/javascript">
 			loadjscssfile("systemOn.js","js");
 		</script>
@@ -116,7 +117,7 @@ session_start();
 
 					<h4>Imagens Cadastradas</h4>
 
-					<table border="5">
+					<table id="tabela_img" border="5">
 						<tr>
 							<td align="center" class="coluna1" >
 								Código
