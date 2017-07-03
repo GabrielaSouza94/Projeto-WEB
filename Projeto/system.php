@@ -174,7 +174,7 @@ session_start();
 				</div>
 
 		</div>
-
+</div>
 
 		<br/>
 		<script language="JavaScript" type="text/javascript" src="./JS/system.js"></script>
