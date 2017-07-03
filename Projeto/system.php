@@ -70,6 +70,9 @@ session_start();
 		</div>
 
 		<!--<div class="box"-->
+		<script type="text/javascript">
+			loadjscssfile("systemOn.js","js");
+		</script>
 		<div class="panel panel-default">
 				<div class="panel-heading" style="background-color: #ffffff;">
 					<div class="row">
