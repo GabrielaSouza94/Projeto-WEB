@@ -20,7 +20,6 @@ session_start();
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 	<link rel="stylesheet" type="text/css" href="./CSS/system.css">
-	<link rel="stylesheet" type="text/css" href="./CSS/systemTabela.css">
 	<script language="JavaScript" type="text/javascript" src="./JS/system.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
@@ -81,64 +80,6 @@ session_start();
 							<a href="#"  id="pesquisar_img-form-link">Pesquisar Imagem</a>
 						</div>
 					</div>
-					<div class="form-group">
-						<input type="text" name="nome_img" id="nome_img" tabindex="1" class="form-control" placeholder="Imagem nome" value="" required>
-					</div>
-					<div class="form-group">
-						<input type="text" name="descricao_img" id="descricao_img" tabindex="1" class="form-control" placeholder="Descrição" value="" required>
-					</div>
-
-
-					<button type="submit" class="btn btn-default" value="Salvar">Enviar</button>
-				</form>
-
-				<br />
-
-				<h4>Imagens Cadastradas</h4>
-				<!--buscar de imagens-->
-				<form  method="post" enctype="multipart/form-data">
-					<div class="form-group">
-						<input type="text" name="pesquisa_img" id="pesq_img" tabindex="1" class="form-control" placeholder="Pesquisar image" value="" required>
-					</div>
-
-				</form>
-				<table border="5">
-					<tr>
-						<td align="center" class="coluna1" style="width:5% ">
-							Código
-						</td>
-						<td align="cente" style="width:15%">Nome imagem</td>
-						<td align="center" class="coluna2" style="width:25% ">
-							Visualizar imagem
-						</td>
-						<td align="center" style="width:15%">Descrição</td>
-						<td align="center" class="coluna3" style="width:15% ">
-							Excluir imagem
-						</td>
-					</tr>
-
-					<?php
-					include'dbh.php';
-
-					$sql = "SELECT * FROM tabela_imagens";
-					$result = mysqli_query($conn,$sql);
-					//echo $result;
-					while($row = mysqli_fetch_object($result)) { ?>
-
-					<tr>
-						<td align="center" class="coluna11" style=" width:5% ">
-						<?php echo $row->codigo ?>
-						</td>
-						<td align="center" class="coluna27" style="width:15%;text-align:center" >
-							<?php echo $row->nome_img?>
-						</td>
-						<td align="center" class="coluna22" style=" width:25% ; text-align: center; height:50px">
-							<div class="row">
-								<div class="col-xs-6 col-md-3">
-									<a href="#" class="thumbnail">
-										<?php echo '<img src="ver_img.php? id='.$row->codigo.'">'; ?>
-									</a>
-
 					<hr>
 				</div>
 
@@ -171,64 +112,63 @@ session_start();
 					<br />
 
 					<h4>Imagens Cadastradas</h4>
-					<button type="submit" id="clitable">click</button>						
-						<table  id="tabela_img" border="5">
-							<tr>
-								<td align="center" class="coluna1" >
-									Código
-								</td>
-								<td align="center" class="coluna2" >
-									Nome imagem
-								</td>
-								<td align="center" class="coluna3" >
-									Visualizar imagem
-								</td>
-								<td align="center" class="coluna4" >
-									Descrição
-								</td>
-								<td align="center" class="coluna5" >
-									Excluir imagem
-								</td>
-							</tr>
 
-							<?php
-							include'dbh.php';
+					<table border="5">
+						<tr>
+							<td align="center" class="coluna1" >
+								Código
+							</td>
+							<td align="center" class="coluna2" >
+								Nome imagem
+							</td>
+							<td align="center" class="coluna3" >
+								Visualizar imagem
+							</td>
+							<td align="center" class="coluna4" >
+								Descrição
+							</td>
+							<td align="center" class="coluna5" >
+								Excluir imagem
+							</td>
+						</tr>
 
-							$sql = "SELECT * FROM tabela_imagens";
-							$result = mysqli_query($conn,$sql);
-						//echo $result;
-							while($row = mysqli_fetch_object($result)) { ?>
+						<?php
+						include'dbh.php';
 
-							<tr>
-								<td align="center" class="coluna11" >
-									<?php echo $row->codigo ?>
-								</td>
-								<td align="center" class="coluna22"  >
-									<?php echo $row->nome_imagem?>
-								</td>
-								<td align="center" class="coluna33">
-									<div class="row">
-										<div class="col-xs-6 col-md-3">
-											<a href="#" class="thumbnail">
-												<?php echo '<img src="ver_img.php? id='.$row->codigo.'">'; ?>
-											</a>
-										</div>
+						$sql = "SELECT * FROM tabela_imagens";
+						$result = mysqli_query($conn,$sql);
+					//echo $result;
+						while($row = mysqli_fetch_object($result)) { ?>
 
-								</td>
-								<td align="center"  class="coluna44" >
-									<?php echo $row->descricao?>
-								</td>
+						<tr>
+							<td align="center" class="coluna11" >
+								<?php echo $row->codigo ?>
+							</td>
+							<td align="center" class="coluna22"  >
+								<?php echo $row->nome_imagem?>
+							</td>
+							<td align="center" class="coluna33">
+								<div class="row">
+									<div class="col-xs-6 col-md-3">
+										<a href="#" class="thumbnail">
+											<?php echo '<img src="ver_img.php? id='.$row->codigo.'">'; ?>
+										</a>
+									</div>
+								</div>
 
+							</td>
+							<td align="center"  class="coluna44" >
+								<?php echo $row->descricao?>
+							</td>
 
-								<td align="center" class="coluna55">
-									<?php echo '<a href="del_img.php?id='.$row->codigo.'">Excluir</a>'; ?>
-								</td>
+							<td align="center" class="coluna55">
+								<?php echo '<a href="del_img.php?id='.$row->codigo.'">Excluir</a>'; ?>
+							</td>
 
-							</tr>
-							<?php } ?>
+						</tr>
+						<?php } ?>
 
-						</table>
-					</div>
+					</table>
 
 
 				</div>
