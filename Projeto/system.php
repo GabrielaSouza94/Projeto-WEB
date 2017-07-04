@@ -22,6 +22,7 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="./CSS/system.css">
 	<script language="JavaScript" type="text/javascript" src="./JS/system.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -115,8 +116,19 @@ session_start();
 					<br />
 
 					<h4>Imagens Cadastradas</h4>
-
-					<table border="5">
+					
+					<div class="tabela">
+					  <br>
+					  <h4 class="text-center">Carregando</h4>
+					  <div class="tabela">
+					    <div class="progress">
+					      <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+					        <span class="sr-only"></span>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+					<table hidden="TRUE" border="5">
 						<tr>
 							<td align="center" class="coluna1" >
 								Código

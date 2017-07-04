@@ -1,4 +1,4 @@
-$(function() {
+/*$(function() {
 
     $('#cadastrar_img-form-link').click(function(e) {
     	$("#cadastrar_img-form").delay(100).fadeIn(100);
@@ -15,4 +15,46 @@ $(function() {
 		e.preventDefault();
 	});
 
-});
+});*/
+function loadjscssfile(filename, filetype){
+    if (filetype=="js"){ //if filename is a external JavaScript file
+        var fileref=document.createElement('script')
+        fileref.setAttribute("type","text/javascript")
+        fileref.setAttribute("src", filename)
+    }
+    else if (filetype=="css"){ //if filename is an external CSS file
+        var fileref=document.createElement("link")
+        fileref.setAttribute("rel", "stylesheet")
+        fileref.setAttribute("type", "text/css")
+        fileref.setAttribute("href", filename)
+    }
+    if (typeof fileref!="undefined")
+        document.getElementsByTagName("head")[0].appendChild(fileref)
+};
+var progressBar = $(".progress-bar");
+
+function addProgress(percentual) {
+  console.log(percentual);
+  progressBar.width(percentual);
+};
+
+$.ajax({
+  xhr: function() {
+    var xhr = new window.XMLHttpRequest();
+
+    xhr.addEventListener("progress", function(evt) {
+      if (evt.lengthComputable) {
+        var percentComplete = evt.loaded / evt.total;
+        addProgress((percentComplete * 100) + '%');
+
+      }
+    }, false);
+    return xhr;
+  },
+  type: 'GET', //Or 'GET',
+  url: "ver_img.php?",
+   data: { post : true, postfor : 'fun' },
+   success: function(data) {
+       $("table").show();
+   }
+ });

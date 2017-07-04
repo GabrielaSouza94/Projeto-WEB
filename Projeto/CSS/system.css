@@ -146,7 +146,15 @@ body {
 
 
 /*<<<< CSS FOOTER */
-
+/*CSS PROGRESS BAR*/
+.tabela{
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: auto;
+}
+.progress{
+  
+}
 /*CSS BOX BOX>>>>>*/
 .panel {
     margin-top: 4%;
@@ -254,39 +262,39 @@ body {
 /*<<<<<CSS WARNING BOX*/
 
 /* CSS TABELA >>>>>>>*/
-.coluna1{ 
+.coluna1{
     width:6% ;height:10% }
-.coluna11{ 
+.coluna11{
     width:6% ; }
 
-.coluna2{ 
+.coluna2{
    width:17% ;height:10% }
-.coluna22{ 
+.coluna22{
     width:17% ; }
 
-.coluna3{ 
+.coluna3{
     width:30% ;height:10%}
-.coluna33{ 
+.coluna33{
     width:30% ; }
 
-.coluna4{ 
+.coluna4{
     width:30% ;height:10% }
-.coluna44{ 
+.coluna44{
     width:30% ; }
 
-.coluna5{ 
+.coluna5{
     width:17% ;height:10% }
-.coluna55{ 
+.coluna55{
     width:17% ; }
 
 .row { /*linha da imagem na tabela*/
      margin-right: 0px;
-     margin-left: 0px; 
+     margin-left: 0px;
 }
 
 .thumbnail{ /*dimensão da imagem na tabela*/
     width: 100px;
-}  
+}
 /*<<<<< CSS TABELA*/
 
 /*CSS JAVASCRIPT HEADING TABELA >>>>>>>*/
