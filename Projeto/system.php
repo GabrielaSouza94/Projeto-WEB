@@ -21,24 +21,27 @@ session_start();
 
 	<link rel="stylesheet" type="text/css" href="./CSS/system.css">
 	<script language="JavaScript" type="text/javascript" src="./JS/system.js"></script>
+
+
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="/resources/demos/style.css">
-<style>
-.ui-progressbar {
-	position: relative;
-}
-.progress-label {
-	position: absolute;
-	left: 50%;
-	top: 4px;
-	font-weight: bold;
-	text-shadow: 1px 1px 0 #fff;
-}
+
+	<style>
+	.ui-progressbar {
+		position: relative;
+	}
+	.progress-label {
+		position: absolute;
+		left: 50%;
+		top: 4px;
+		font-weight: bold;
+		text-shadow: 1px 1px 0 #fff;
+	}
 </style>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 </head>
 
 <body>
@@ -85,12 +88,11 @@ session_start();
 			}
 			?>
 		</div>
-
-		<!--<div class="box"-->
 		<!--ON-DEMAND para carrega o javascript-->
 		<script type="text/javascript">
-			loadjscssfile("./JS/systemOn.js","js");
+		loadjscssfile('./JS/systemOn.js','js');
 		</script>
+		<!--<div class="box"-->
 		<div class="panel panel-default">
 				<div class="panel-heading" style="background-color: #ffffff;">
 					<div class="row">
@@ -133,7 +135,8 @@ session_start();
 					<br />
 
 					<h4>Imagens Cadastradas</h4>
-					<script type="text/javascript">  $( function() {
+					<script type="text/javascript" >
+					$( function() {
 				    var progressbar = $( "#progressbar" ),
 				      progressLabel = $( ".progress-label" );
 
@@ -164,7 +167,7 @@ session_start();
 
 
 					</script>
-					<div id="progressbar"><div class="progress-label">Loading...</div></div>
+					<div id="progressbar"><div class="progress-label">Carregando...</div></div>
 					<table hidden="TRUE" border="5">
 						<tr>
 							<td align="center" class="coluna1" >
@@ -229,6 +232,6 @@ session_start();
 </div>
 
 		<br/>
-		<script language="JavaScript" type="text/javascript" src="./JS/system.js"></script>
+
 	</body>
 	</html>

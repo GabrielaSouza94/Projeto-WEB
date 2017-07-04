@@ -14,39 +14,53 @@
 		$(this).addClass('active');
 		e.preventDefault();
 	});
+});*/
+function loadjscssfile(filename, filetype){
+  console.log('in load');
+
+    if (filetype=="js"){ //if filename is a external JavaScript file
+        var fileref=document.createElement('script')
+        fileref.setAttribute("type","text/javascript")
+        fileref.setAttribute("src", filename);
+        console.log('now js');
+    }
+    else if (filetype=="css"){ //if filename is an external CSS file
+        var fileref=document.createElement("link")
+        fileref.setAttribute("rel", "stylesheet")
+        fileref.setAttribute("type", "text/css")
+        fileref.setAttribute("href", filename)
+    }
+    if (typeof fileref!="undefined")
+        document.getElementsByTagName("head")[0].appendChild(fileref)
+}
+
+
+/*  $( function () {
+    var progressbar = $( "#progressbar" ),
+      progressLabel = $( ".progress-label" );
+
+    progressbar.progressbar({
+      value: false,
+      change: function() {
+        progressLabel.text( progressbar.progressbar( "value" ) + "%" );
+      },
+      complete: function() {
+        progressLabel.hide();
+        progressbar.hide();
+        $("table").show();
+      }
+    });
+
+    function progress() {
+      var val = progressbar.progressbar( "value" ) || 0;
+
+      progressbar.progressbar( "value", val + 2 );
+
+      if ( val < 99 ) {
+        setTimeout( progress, 80 );
+      }
+    }
+
+    setTimeout( progress, 5000 );
+  } );
 */
-});
-$(function loadjsfile(filename, filetype){
-      if (filetype=="js"){ //if filename is a external JavaScript file
-          var fileref=document.createElement('script')
-          fileref.setAttribute("type","text/javascript")
-          fileref.setAttribute("src", filename)
-      }
-
-      if (typeof fileref!="undefined")
-          document.getElementsByTagName("head")[0].appendChild(fileref)
-  });
-  (function($, window, undefined) {
-      //is onprogress supported by browser?
-      var hasOnProgress = ("onprogress" in $.ajaxSettings.xhr());
-
-      //If not supported, do nothing
-      if (!hasOnProgress) {
-          return;
-      }
-
-      //patch ajax settings to call a progress callback
-      var oldXHR = $.ajaxSettings.xhr;
-      $.ajaxSettings.xhr = function() {
-          var xhr = oldXHR.apply(this, arguments);
-          if(xhr instanceof window.XMLHttpRequest) {
-              xhr.addEventListener('progress', this.progress, false);
-          }
-
-          if(xhr.upload) {
-              xhr.upload.addEventListener('progress', this.progress, false);
-          }
-
-  return xhr;
-      };
-  })(jQuery, window);

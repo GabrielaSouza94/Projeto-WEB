@@ -1,17 +1,13 @@
+
 <?php
+	include("dbh.php");
+	$valor = $_GET['valor'];
 
-include("dbh.php");
-if (isset($_GET["nome"])) {
-	$codigo = $_GET["nome"];
+	//querry para busca da img
+	$sql = mysql_query("SELECT * FROM imagem WHERE id LIKE '%".$valor."%'");
 
-	$sql = "SELECT * FROM tabela_imagens WHERE nome_imagem = '$nome' ";
-	$result = mysqli_query($conn,$sql);
-	$row=mysqli_fetch_object($result);
-	echo $row->imagem;
-	//EXIBEIMAGEM
-	header("Content-type: image/gif");
-
-}else{
-	header("Location: system.php?resposta=naopassouinome");
-}
+	while ($noticias = mysql_fetch_object($sql)) {
+		echo "<a href=\"javascript:func()\" onclick=\"exibeIMG('".$noticias->id."')\">" . $noticias->titulo . "</a><br />";
+	}
+	header("Content-Type: text/html; charset=ISO-8859-1",true);
 ?>
