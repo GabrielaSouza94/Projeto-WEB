@@ -1,4 +1,4 @@
-function exibirConteudo(id) {
+function exibeIMG(id) {
 
 
 if(window.XMLHttpRequest) {

@@ -14,7 +14,7 @@ if($imagem != NULL) {//verifica se teve uma imagem carregada
 
 		$mysqlImg = addslashes(fread(fopen($nomeFinal, "r"), $tamanhoImg));
 
-		$sql = "INSERT INTO tabela_imagens (imagem,nome_imagem,descricao) VALUES ('$mysqlImg','$nome','$descricao')";
+		$sql = "INSERT INTO tabela_imagens (imagem,nome_img,descricao) VALUES ('$mysqlImg','$nome','$descricao')";
 
 		$result = mysqli_query($conn,$sql);
 
