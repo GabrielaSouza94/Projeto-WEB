@@ -14,13 +14,13 @@ req.open("Get", url, true);
 req.onreadystatechange = function() {
 
 	if(req.readyState == 1) {
-		document.getElementById('conteudo').innerHTML = 'Aguarde...';
+		document.getElementById('imagem').innerHTML = 'Procurando...';
 	}
 
 	if(req.readyState == 4 && req.status == 200) {
 
 	var resposta = req.responseText;
-	document.getElementById('conteudo').innerHTML = resposta;
+	document.getElementById('imagem').innerHTML = resposta;
 	}
 }
 req.send(null);
