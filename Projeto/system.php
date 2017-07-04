@@ -73,7 +73,7 @@ session_start();
 		<!--<div class="box"-->
 		<!--ON-DEMAND para carrega o javascript-->
 		<script type="text/javascript">
-			loadjscssfile("systemOn.js","js");
+			loadjscssfile("./JS/systemOn.js","js");
 		</script>
 		<div class="panel panel-default">
 				<div class="panel-heading" style="background-color: #ffffff;">
@@ -117,8 +117,8 @@ session_start();
 					<br />
 
 					<h4>Imagens Cadastradas</h4>
-					
-					<div class="tabela">
+
+					<div class="tabela" id="desap">
 					  <br>
 					  <h4 class="text-center">Carregando</h4>
 					  <div class="tabela">

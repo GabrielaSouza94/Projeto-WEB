@@ -51,6 +51,7 @@ $.ajax({
   url: "ver_img.php?",
    data: { post : true, postfor : 'fun' },
    success: function(data) {
+        $("#desap").hide();
        $("table").show();
    }
  });
