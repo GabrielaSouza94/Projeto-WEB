@@ -26,32 +26,27 @@ $(function loadjsfile(filename, filetype){
       if (typeof fileref!="undefined")
           document.getElementsByTagName("head")[0].appendChild(fileref)
   });
+  (function($, window, undefined) {
+      //is onprogress supported by browser?
+      var hasOnProgress = ("onprogress" in $.ajaxSettings.xhr());
 
-var progressBar = $(".progress-bar");
-
-function addProgress(percentual) {
-  console.log(percentual);
-  progressBar.width(percentual);
-};
-
-$.ajax({
-  xhr: function() {
-    var xhr = new window.XMLHttpRequest();
-
-    xhr.addEventListener("progress", function(evt) {
-      if (evt.lengthComputable) {
-        var percentComplete = evt.loaded / evt.total;
-        addProgress((percentComplete * 100) + '%');
-
+      //If not supported, do nothing
+      if (!hasOnProgress) {
+          return;
       }
-    }, false);
-    return xhr;
-  },
-  type: 'GET', //Or 'GET',
-  url: "ver_img.php?",
-   data: { post : true, postfor : 'fun' },
-   success: function(data) {
-        $("#desap").hide();
-       $("table").show();
-   }
- });
+
+      //patch ajax settings to call a progress callback
+      var oldXHR = $.ajaxSettings.xhr;
+      $.ajaxSettings.xhr = function() {
+          var xhr = oldXHR.apply(this, arguments);
+          if(xhr instanceof window.XMLHttpRequest) {
+              xhr.addEventListener('progress', this.progress, false);
+          }
+
+          if(xhr.upload) {
+              xhr.upload.addEventListener('progress', this.progress, false);
+          }
+
+  return xhr;
+      };
+  })(jQuery, window);

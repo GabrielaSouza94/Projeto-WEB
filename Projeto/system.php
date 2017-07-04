@@ -23,6 +23,22 @@ session_start();
 	<script language="JavaScript" type="text/javascript" src="./JS/system.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<style>
+.ui-progressbar {
+	position: relative;
+}
+.progress-label {
+	position: absolute;
+	left: 50%;
+	top: 4px;
+	font-weight: bold;
+	text-shadow: 1px 1px 0 #fff;
+}
+</style>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -117,18 +133,38 @@ session_start();
 					<br />
 
 					<h4>Imagens Cadastradas</h4>
+					<script type="text/javascript">  $( function() {
+				    var progressbar = $( "#progressbar" ),
+				      progressLabel = $( ".progress-label" );
 
-					<div class="tabela" id="desap">
-					  <br>
-					  <h4 class="text-center">Carregando</h4>
-					  <div class="tabela">
-					    <div class="progress">
-					      <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-					        <span class="sr-only"></span>
-					      </div>
-					    </div>
-					  </div>
-					</div>
+				    progressbar.progressbar({
+				      value: false,
+				      change: function() {
+				        progressLabel.text( progressbar.progressbar( "value" ) + "%" );
+				      },
+				      complete: function() {
+				        progressLabel.hide();
+								progressbar.hide();
+								$("table").show();
+				      }
+				    });
+
+				    function progress() {
+				      var val = progressbar.progressbar( "value" ) || 0;
+
+				      progressbar.progressbar( "value", val + 2 );
+
+				      if ( val < 99 ) {
+				        setTimeout( progress, 80 );
+				      }
+				    }
+
+				    setTimeout( progress, 5000 );
+				  } );
+
+
+					</script>
+					<div id="progressbar"><div class="progress-label">Loading...</div></div>
 					<table hidden="TRUE" border="5">
 						<tr>
 							<td align="center" class="coluna1" >
